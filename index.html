@@ -3,262 +3,58 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Vitamin D - Enzyme Table</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitamin D - plant related enzyme databse</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-
-    .table-container {
-            max-height: 400px;
-
-        }
-    .fixed-header thead {
-            position: sticky;
-            top: 0;
-            background-color: #fff;
-            z-index: 1;
-        }
-    </style>
-
 
 </head>
 
 <body>
-    <section class="table">
-        <div class="table-container fixed-header"><div>
-            Filter Local ID:
-            <select id="filterLocalID">
-                <option value="">All</option>
-            </select>
-            <button onclick="applyFilter()">Apply</button>
-            <button id="downloadBtn" >Download(.xlsx)</button>
-        </div>
+    <div class="container" id="title">
+        <header style="display: flex; align-items: center; justify-content: center;">
+            <img display: flex;  src="images/sun_1.png" alt="Image" height="90" style="opacity: 0.4; margin-right: 50px;">
+            <h1 style="text-align: center;">Plant Enzyme database - Vitamin D </h1>
+            <img display: flex;  src="images/food_crop.png" alt="Image" height="90" style="opacity: 0.4; margin-left: 50px;">
+        </header>
 
-            <table id="table_1">
-                <thead>
-                    <tr>
-                        <th>Sl. No.</th>
-                        <th>Local_ID</th>
-                        <th>Enzyme name</th>
-                        <th>Enzyme class</th>
-                        <th>EC Number</th>
-                        <th>No_sequence/structure available</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td><a href="#" onclick="openPopup('excel_data/AACT.html')">AACT</a></td>
-                        <td>Acetyl-CoA acetyltransferase</td>
-                        <td>Acyltransferases</td>
-                        <td><a href="https://www.genome.jp/dbget-bin/www_bget?ec:2.3.1.9" target="_blank">2.3.1.9</a></td>
-                        <td>32</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td><a href="#" onclick="openPopup('excel_data/HMGS.html')">HMGS</a></td>
-                        <td> 3-hydroxy-3-methylglutaryl-CoA synthase</td>
-                        <td>Acyltransferases</td>
-                        <td><a href="https://www.genome.jp/dbget-bin/www_bget?ec:2.3.3.10" target="_blank">2.3.3.10</a></td>
-                        <td>29</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td><a href="#" onclick="openPopup('excel_data/HMGR.html')">HMGR</a></td>
-                        <td>  3-hydroxy-3-methylglutaryl-CoA reductase </td>
-                        <td>Oxidoreductases</td>
-                        <td><a href="https://www.genome.jp/dbget-bin/www_bget?ec:1.1.1.34" target="_blank">1.1.1.34</a></td>
-                        <td>31</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td><a href="#" onclick="openPopup('excel_data/MVK.html')">MVK</a></td>
-                        <td>  mevalonate kinase</td>
-                        <td>Transferases</td>
-                        <td><a href="https://www.genome.jp/dbget-bin/www_bget?ec: 2.7.1.36" target="_blank">2.7.1.36</a></td>
-                        <td>110</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td><a href="#" onclick="openPopup('excel_data/SQE.html')">SQE</a></td>
-                        <td> squalene epoxidase</td>
-                        <td>Oxidoreductases</td>
-                        <td><a href="https://www.genome.jp/dbget-bin/www_bget?ec: 1.14.14.17" target="_blank">1.14.14.17</a></td>
-                        <td>131</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td><a href="#" onclick="openPopup('excel_data/BAS.html')">BAS</td>
-                        <td>  β-amyrin synthase</td>
-                        <td>Isomerases</td>
-                        <td><a href="https://www.genome.jp/dbget-bin/www_bget?ec:5.4.99.39" target="_blank">5.4.99.39</a></td>
-                        <td>155</td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td><a href="#" onclick="openPopup('excel_data/CAS.html')">CAS</a></td>
-                        <td>  cycloartenol synthase</td>
-                        <td>Isomerases</td>
-                        <td><a href="https://www.genome.jp/dbget-bin/www_bget?ec:5.4.99.8 " target="_blank">5.4.99.8</a></td>
-                        <td>208</td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td><a href="#" onclick="openPopup('excel_data/SMT.html')">SMT</a></td>
-                        <td>  sterol C-24 methyltransferase</td>
-                        <td>Methyltransferases</td>
-                        <td><a href="https://www.genome.jp/dbget-bin/www_bget?ec:2.1.1.143" target="_blank">2.1.1.143</a></td>
-                        <td>100</td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td><a href="#" onclick="openPopup('excel_data/SMO.html')">SMO</a></td>
-                        <td>  C-4 sterol methyl oxidase 1</td>
-                        <td>Oxidoreductases</td>
-                        <td><a href="https://www.genome.jp/dbget-bin/www_bget?ec:1.14.18.9" target="_blank">1.14.18.9</a></td>
-                        <td>15</td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td><a href="#" onclick="openPopup('excel_data/CPI.html')">CPI</a></td>
-                        <td>  cyclopropylsterol isomerase</td>
-                        <td>Isomerases</td>
-                        <td><a href="https://www.genome.jp/dbget-bin/www_bget?ec:5.5.1.9" target="_blank">5.5.1.9</a></td>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>11</td>
-                        <td><a href="#" onclick="openPopup('excel_data/CYP51.html')">CYP51</a></td>
-                        <td>  sterol C-14 demethylase</td>
-                        <td>Oxidoreductases</td>
-                        <td><a href="https://www.genome.jp/dbget-bin/www_bget?ec:1.14.14.154" target="_blank">1.14.14.154</a></td>
-                        <td>70</td>
-                    </tr>
-                    <tr>
-                        <td>12</td>
-                        <td><a href="#" onclick="openPopup('excel_data/C14R.html')">C14R</a></td>
-                        <td>  sterol C-14 reductase</td>
-                        <td>Oxidoreductases</td>
-
-                        <td><a href="https://www.genome.jp/dbget-bin/www_bget?ec:1.3.1.70" target="_blank">1.3.1.70</a></td>
-                        <td>11</td>
-                    </tr>
-                    <tr>
-                        <td>13</td>
-                        <td><a href="#" onclick="openPopup('excel_data/8_7_SI.html')">8,7 SI</a></td>
-                        <td>  sterol 8,7 isomerase</td>
-                        <td>Isomerases</td>
-                        <td><a href="https://www.genome.jp/dbget-bin/www_bget?ec:5.3.3.5" target="_blank">5.3.3.5 </a></td>
-                        <td>27</td>
-                    </tr>
-                    <tr>
-                        <td>14</td>
-                        <td><a href="#" onclick="openPopup('excel_data/7DR2.html')">7-DR2</a></td>
-                        <td>  7-dehydrocholesterol reductase 2</td>
-                        <td>Oxidoreductases</td>
-                        <td><a href="https://www.genome.jp/dbget-bin/www_bget?ec:1.3.1.21" target="_blank">1.3.1.21</a></td>
-                        <td>52</td>
-                    </tr>
-                    <tr>
-                        <td>15</td>
-                        <td><a href="#" onclick="openPopup('excel_data/SC5D.html')">SC5D</a></td>
-                        <td> sterol 5(6)-desaturase 1</td>
-                        <td>Oxidoreductases</td>
-                        <td><a href="https://www.genome.jp/dbget-bin/www_bget?ec:1.14.19.20" target="_blank">1.14.19.20</a></td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>16</td>
-                        <td><a href="#" onclick="openPopup('excel_data/7DR1.html')">7-DR1</a></td>
-                        <td>  7-dehydrocholesterol reductase 1</td>
-                        <td>Oxidoreductases</td>
-                        <td><a href="https://www.genome.jp/dbget-bin/www_bget?ec:1.3.1.21" target="_blank">1.3.1.21</a></td>
-                        <td>48</td>
-                    </tr>
-                    <tr>
-                        <td>17</td>
-                        <td><a href="#" onclick="openPopup('excel_data/SSR2.html')">SSR2</a></td>
-                        <td> sterol side chain reductase 2</td>
-                        <td>Oxidoreductases</td>
-                        <td><a href="https://www.genome.jp/dbget-bin/www_bget?ec:1.3.1.72" target="_blank">1.3.1.72</a></td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>18</td>
-                        <td><a href="#" onclick="openPopup('excel_data/SMO2.html')">SMO2</a></td>
-                        <td>  C-4 sterol methyl oxidase 2</td>
-                        <td>Oxidoreductases</td>
-
-                        <td><a href="https://www.genome.jp/dbget-bin/www_bget?ec:1.14.18.9" target="_blank">1.14.18.9</a></td>
-                        <td>1</td>
-                    </tr>
-
-                </tbody>
-            </table>
-        </div>
-    </section>
-    <script>
-    function applyFilter() {
-        const filterValue = document.getElementById('filterLocalID').value;
-        const table = document.getElementById('table_1');
-        const rows = table.querySelectorAll('tbody tr');
-
-        rows.forEach(row => {
-            const cellValue = row.children[1].textContent;
-            if (filterValue === '' || cellValue === filterValue) {
-                row.style.display = '';
-            } else {
-                row.style.display = 'none';
-            }
-        });
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        const slNoFilter = document.getElementById('filterLocalID');
-        const slNoOptions = new Set();
-
-        const rows = document.querySelectorAll('tbody tr');
-        rows.forEach(row => {
-            slNoOptions.add(row.children[1].textContent);
-        });
-
-        slNoOptions.forEach(option => {
-            const optionElement = document.createElement('option');
-            optionElement.value = option;
-            optionElement.textContent = option;
-            slNoFilter.appendChild(optionElement);
-        });
-    });
-    </script>
-    <script>
-    function openPopup(url) {
-        window.open(url, 'AACT', 'width=800,height=400');
-        return false;
-    }
-    </script>
+        <hr>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
-<script>
-document.getElementById('downloadBtn').addEventListener('click', function(){
-    // Get the table element
-    var table = document.getElementById('table_1');
-
-    // Convert the table to a SheetJS worksheet
-    var worksheet = XLSX.utils.table_to_sheet(table);
-
-    // Convert the worksheet to a workbook
-    var workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet1');
-
-    // Save the workbook as an XLSX file
-    XLSX.writeFile(workbook, 'table_1.xlsx');
-});
-</script>
+        <div class="nav-container" id="nav" style="background-color: #f0f0f0;" >
+        <nav>
+            <ul>
+                <li><a class="button" href="home.html">Home</a></li>
+                <li><a class="button" href="contents.html">Contents</a></li>
+                <li><a class="button" href="about.html">About</a></li>
+                <li><a class="button" href="mailto:nuvinod94@gmail.com">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 
 
 
 
 
+
+        <div class="layout" >
+            <div class="left-pane">
+                <section class="container"  style="text-align: center;">
+                    <h2 style="background-color: #F2F3F4; border: 1px solid #ccc; padding: 10px; text-align: center;">Introduction</h2>
+                    <p>This website is created to provide access to a database of Enzymes related to vitamin D synthesis in plants.</p>
+                </section>
+            </div>
+            <div class="right-pane" style="text-align: center;">
+                <section class="container" class="table"  >
+                    <h2 style="background-color: #F2F3F4; border: 1px solid #ccc; padding: 10px; text-align: center;">Enzyme Information</h2>
+                    <iframe src="table_1.html" frameborder="1" style="width:100%; height:400px; "></iframe>
+                </section>
+            </div>
+
+
+
+
+
+    </div>
 </body>
 
 </html>
