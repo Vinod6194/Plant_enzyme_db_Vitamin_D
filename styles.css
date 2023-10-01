@@ -1,0 +1,85 @@
+body {
+    background-color: #D4E6F1;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+.content {
+    margin-bottom: 20px;
+}
+
+table {
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+th, td {
+    min-width: 10px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+download-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+/* Add some margin to the icon */
+download-icon {
+    margin-right: 5px;
+}
