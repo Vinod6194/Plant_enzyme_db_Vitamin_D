@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metabolic Pathway</title>
+    <style>
+        .pathway {
+            width: 800px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <svg class="pathway" xmlns="http://www.w3.org/2000/svg">
+        <!-- Acetyl CoA -->
+        <rect x="40" y="50" width="120" height="40" fill="white" stroke="black" />
+        <text x="55" y="75" font-size="18" fill="black" font-weight="bold">Acetyl CoA</text>
+
+        <!-- AACT -->
+        <text x="180" y="85" font-size="12" fill="black">(AACT)</text>
+
+        <!-- HMGS -->
+        <text x="230" y="65" font-size="12" fill="black">(HMGS)</text>
+
+        <!-- HMGR -->
+        <text x="285" y="85" font-size="12" fill="black">(HMGR)</text>
+
+        <!-- Arrow 1 -->
+        <line x1="159" y1="70" x2="350" y2="70" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"  />
+
+
+        <!-- MVA -->
+        <rect x="370" y="50" width="80" height="40" fill="white" stroke="black" />
+        <text x="385" y="75" font-size="18" fill="black" font-weight="bold">MVA</text>
+
+        <!-- MVK -->
+        <text x="580" y="75" font-size="12" fill="black">(MVK)</text>
+
+        <!-- Squalene -->
+        <rect x="700" y="50" width="100" height="40" fill="white" stroke="black" />
+        <text x="715" y="75" font-size="12" fill="black">Squalene</text>
+
+        <!-- SQE -->
+        <text x="810" y="75" font-size="12" fill="black">(SQE)</text>
+
+        <!-- 2,3-oxidosqualene -->
+        <rect x="930" y="50" width="150" height="40" fill="white" stroke="black" />
+        <text x="945" y="75" font-size="12" fill="black">2,3-oxidosqualene</text>
+
+        <!-- Arrow 4 -->
+        <line x1="590" y1="70" x2="690" y2="70" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
+
+        <!-- Arrow 5 -->
+        <line x1="810" y1="70" x2="920" y2="70" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
+
+        <!-- Arrow 6 -->
+        <line x1="920" y1="70" x2="1070" y2="70" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
+
+        <!-- Arrowhead marker definition -->
+        <defs>
+            <marker id="arrowhead" markerWidth="8" markerHeight="7" refX="0" refY="3.0" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="black" />
+            </marker>
+        </defs>
+    </svg>
+</body>
+</html>
