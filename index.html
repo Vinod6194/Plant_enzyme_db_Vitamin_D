@@ -1,94 +1,215 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vitamin D - plant related enzyme databse</title>
-    <link rel="stylesheet" href="styles.css">
-
-</head>
-
-<body>
-    <div class="container" id="title">
-        <header style="display: flex; align-items: center; justify-content: center;" >
-        <style>
-
-        </style>
-            <img id="sun" style="display: inline-block; margin-right: 50px; opacity: 0.4;" src="images/sun_1.png" alt="Image" height="90">
-            <h1 style="display: inline-block; text-align: center;">Plant Enzyme database - Vitamin D </h1>
-            <img id="food_crop" style="display: inline-block; margin-left: 50px; opacity: 0.4;" src="images/food_crop.png" alt="Image" height="90">
-        </header>
-
-        <hr>
-
-
-        <div class="nav-container" id="nav" style="background-color: #f0f0f0;" >
-        <nav>
-            <ul>
-                <li><a class="button" href="home.html">Home</a></li>
-                <li><a class="button" href="contents.html">Contents</a></li>
-                <li><a class="button" href="about.html">About</a></li>
-                <li><a class="button" href="mailto:nuvinod94@gmail.com">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <div class="internal_container" >
-        <div class="layout" >
-            <div class="left-pane" >
-                <section class="internal_container"  style="text-align: center;" id="introduction">
-                    <h2 style="background-color: #F2F3F4; border: 1px solid #ccc; padding: 10px; text-align: center;">Introduction</h2>
-                    <p>This website is created to provide access to a database of Enzymes related to vitamin D synthesis in plants.</p>
-                </section>
-            </div>
-            <div class="right-pane" style="text-align: center;" id="flow_chart_div" >
-                <section class="internal_container" style="text-align: center;" id="flow_chart_sec" >
-                <iframe id="flow_chart_iframe" src="Sterol_bio_synthesis_flow_chart.html" frameborder="1" style="width:100%; height:515px; display: inline-block; "  ></iframe>
-                </section>
-            </div>
-
-    </div>
-    </div>
-    <br>
-
-
-
-    <div>
-        <div >
-                <section  class="table" id="table_1_sec" >
-                    <h2 style="background-color: #F2F3F4; border: 1px solid #ccc; padding: 10px; text-align: center;">Enzyme Information</h2>
-                    <iframe  src="table_1.html" frameborder="1" style="width:100%; height:400px; "></iframe>
-                </section>
-    </div>
+.wrapper{
+    width:100%;
+}
 
 
 
 
-    </div>
+.body {
+    background-color: #D4E6F1;
+    font-family: Arial, sans-serif;
+}
 
- <script>
-    function handleResize() {
-        const screenWidth = window.innerWidth;
-        const sunImage = document.getElementById('sun');
-        const foodCropImage = document.getElementById('food_crop');
+.container {
+    margin: 0 auto;
+    padding: 10px;
+    background-color: white;
+    border: 3px solid #333;
+    border-radius: 5px;
+   flex-wrap: wrap;
 
-        if (screenWidth <= 850) {
-            sunImage.style.display = 'none';
-            foodCropImage.style.display = 'none';
-        } else {
-            sunImage.style.display = 'block';
-            foodCropImage.style.display = 'block';
+}
+
+
+.internal_container_1 {
+    margin: 0 auto;
+    padding: 1px;
+    background-color: white;
+    border: 1.5px dashed #333;
+    border-spacing: 100px;
+    border-radius: 5px;
+}
+
+.internal_container_2 {
+    margin: 0 auto;
+    padding: 10px;
+    background-color: white;
+
+    border-radius: 5px;
+}
+
+.table {
+    border: 2px solid #333;
+    border-radius: 2px;
+    padding: 10px;
+    background-color: white;
+    overflow-x: auto;
+    overflow-y: auto;
+    border-collapse: collapse;
+
+}
+
+
+.table th, .table td {
+    border: 1px solid #333; /* Add border to each cell */
+    padding: 8px; /* Add padding for better readability */
+}
+
+.header {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header img {
+    display: flex;
+    opacity: 0.4;
+    margin-right: 50px;
+}
+
+.h1 {
+    flex:1;
+    text-align: center;
+    font-size: 24px;
+    margin: 0;
+}
+
+.img {
+    flex: 1;
+    max-width: 100%;
+    height: auto;
+}
+.h2 {
+    margin-bottom: 10px;
+}
+
+
+
+
+.ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.li {
+    display: inline-block;
+}
+
+
+.nav-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav li {
+    display: inline;
+}
+
+
+
+
+.list-item {
+            display: inline-block;
+            margin-right: 10px; /* Adjust as needed for spacing */
+}
+
+
+
+
+
+
+.download-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
         }
+
+/* Add some margin to the icon */
+.download-icon {
+    margin-right: 5px;
+}
+
+.layout {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-pane, .right-pane {
+    flex: 1;
+    padding: 3px;
+    background-color: #f0f0f0;
+}
+
+.left-pane {
+    flex: 1;
+}
+
+.right-pane {
+    flex: 2;
+}
+
+
+
+.button {
+    display: inline-block;
+    padding: 1px 1px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.pathwayDiagram {
+    width: 800px;
+    height: 600px;
+    border: 1px solid #ccc;
+}
+
+@media (max-width: 786px) {
+    .layout {
+        flex-direction: column; /* Stack them vertically */
+        align-items: center; /* Center them */
     }
 
-    window.addEventListener('resize', handleResize);
-    // Call the function on page load
-    handleResize();
-</script>
+    .left-pane, .right-pane {
+        width: 100%; /* Make them take up full width */
+    }
+    header {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    header img {
+        height: 60px;
+    }
+    h1 {
+        font-size: 18px;
+        flex-basis: 100%;
+        text-align: center;
+    }
+}
+@media (max-width: 760px) {
+    h1 {
+        font-size: 30px;
+        flex-basis: 100%;
+        text-align: center;
+    }
 
+}
 
-
-</body>
-
-</html>
