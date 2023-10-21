@@ -200,18 +200,13 @@ nav li {
         text-align: center;
     }
 }
-/*@media (max-width: 760px) {
-    img {
-        visibility: hidden;
-        width: 0;
-    }
-     h1 {
-        font-size: 40px;
+
+@media (max-width: 760px) {
+    h1 {
+        font-size: 30px;
         flex-basis: 100%;
         text-align: center;
-    }*/
-
-
+    }
 
 }
 
