@@ -11,10 +11,13 @@
 
 <body>
     <div class="container" id="title">
-        <header style="display: flex; align-items: center; justify-content: center;">
-            <img display: flex;  src="images/sun_1.png" alt="Image" height="90" style="opacity: 0.4; margin-right: 50px;">
-            <h1 style="text-align: center;">Plant Enzyme database - Vitamin D </h1>
-            <img display: flex;  src="images/food_crop.png" alt="Image" height="90" style="opacity: 0.4; margin-left: 50px;">
+        <header style="display: flex; align-items: center; justify-content: center;" >
+        <style>
+
+        </style>
+            <img id="sun" style="display: inline-block; margin-right: 50px; opacity: 0.4;" src="images/sun_1.png" alt="Image" height="90">
+            <h1 style="display: inline-block; text-align: center;">Plant Enzyme database - Vitamin D </h1>
+            <img id="food_crop" style="display: inline-block; margin-left: 50px; opacity: 0.4;" src="images/food_crop.png" alt="Image" height="90">
         </header>
 
         <hr>
@@ -33,14 +36,14 @@
 
     <div class="internal_container" >
         <div class="layout" >
-            <div class="left-pane">
-                <section class="container"  style="text-align: center;" id="introduction">
+            <div class="left-pane" >
+                <section class="internal_container"  style="text-align: center;" id="introduction">
                     <h2 style="background-color: #F2F3F4; border: 1px solid #ccc; padding: 10px; text-align: center;">Introduction</h2>
                     <p>This website is created to provide access to a database of Enzymes related to vitamin D synthesis in plants.</p>
                 </section>
             </div>
             <div class="right-pane" style="text-align: center;" id="flow_chart_div" >
-                <section class="container" style="text-align: center;" id="flow_chart_sec" >
+                <section class="internal_container" style="text-align: center;" id="flow_chart_sec" >
                 <iframe id="flow_chart_iframe" src="Sterol_bio_synthesis_flow_chart.html" frameborder="1" style="width:100%; height:515px; display: inline-block; "  ></iframe>
                 </section>
             </div>
@@ -52,8 +55,8 @@
 
 
     <div>
-        <div class="internal_container" >
-                <section class="container" class="table" id="table_1_sec" >
+        <div >
+                <section  class="table" id="table_1_sec" >
                     <h2 style="background-color: #F2F3F4; border: 1px solid #ccc; padding: 10px; text-align: center;">Enzyme Information</h2>
                     <iframe  src="table_1.html" frameborder="1" style="width:100%; height:400px; "></iframe>
                 </section>
@@ -64,7 +67,25 @@
 
     </div>
 
+ <script>
+    function handleResize() {
+        const screenWidth = window.innerWidth;
+        const sunImage = document.getElementById('sun');
+        const foodCropImage = document.getElementById('food_crop');
 
+        if (screenWidth <= 600) {
+            sunImage.style.display = 'none';
+            foodCropImage.style.display = 'none';
+        } else {
+            sunImage.style.display = 'block';
+            foodCropImage.style.display = 'block';
+        }
+    }
+
+    window.addEventListener('resize', handleResize);
+    // Call the function on page load
+    handleResize();
+</script>
 
 
 
