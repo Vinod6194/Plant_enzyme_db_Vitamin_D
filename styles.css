@@ -1,4 +1,11 @@
-body {
+.wrapper{
+    width:100%;
+}
+
+
+
+
+.body {
     background-color: #D4E6F1;
     font-family: Arial, sans-serif;
 }
@@ -11,6 +18,7 @@ body {
     background-color: white;
     border: 2px solid #333;
     border-radius: 2px;
+    flex-wrap: wrap;
 
 }
 
@@ -26,14 +34,60 @@ body {
 
 }
 
+.table {
+    border: 2px solid #333;
+    border-radius: 2px;
+    padding: 10px;
+    background-color: white;
+    overflow-x: auto;
+    overflow-y: auto;
+    border-collapse: collapse;
+
+}
+
+
+.table th, .table td {
+    border: 1px solid #333; /* Add border to each cell */
+    padding: 8px; /* Add padding for better readability */
+}
 
 .header {
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+
 }
 
 .header h1 {
     margin: 0;
 }
+
+.header img {
+    display: flex;
+    opacity: 0.4;
+    margin-right: 50px;
+}
+
+.h1 {
+    flex:1;
+    text-align: center;
+    font-size: 24px;
+    margin: 0;
+}
+
+.img {
+    flex: 1;
+    max-width: 100%;
+    height: auto;
+}
+.h2 {
+    margin-bottom: 10px;
+}
+
+
+
 
 .ul {
     list-style-type: none;
@@ -70,27 +124,9 @@ nav li {
 }
 
 
-.table {
-    border: 2px solid #333;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: white;
-    overflow-x: auto;
-    overflow-y: auto;
-    width: 97%;
-    border-collapse: collapse;
-
-}
 
 
-.table th, .table td {
-    border: 1px solid #333; /* Add border to each cell */
-    padding: 8px; /* Add padding for better readability */
-}
 
-.h2 {
-    margin-bottom: 10px;
-}
 
 .download-btn {
             padding: 10px 20px;
@@ -109,7 +145,7 @@ nav li {
 
 .layout {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .left-pane, .right-pane {
@@ -136,3 +172,46 @@ nav li {
     border-radius: 5px;
     margin-right: 10px;
 }
+.pathwayDiagram {
+    width: 800px;
+    height: 600px;
+    border: 1px solid #ccc;
+}
+
+@media (max-width: 786px) {
+    .layout {
+        flex-direction: column; /* Stack them vertically */
+        align-items: center; /* Center them */
+    }
+
+    .left-pane, .right-pane {
+        width: 100%; /* Make them take up full width */
+    }
+    header {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    header img {
+        height: 60px;
+    }
+    h1 {
+        font-size: 18px;
+        flex-basis: 100%;
+        text-align: center;
+    }
+}
+/*@media (max-width: 760px) {
+    img {
+        visibility: hidden;
+        width: 0;
+    }
+     h1 {
+        font-size: 40px;
+        flex-basis: 100%;
+        text-align: center;
+    }*/
+
+
+
+}
+
