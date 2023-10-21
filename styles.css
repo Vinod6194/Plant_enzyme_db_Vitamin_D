@@ -178,7 +178,7 @@ nav li {
     border: 1px solid #ccc;
 }
 
-@media (max-width: 786px) {
+@media (max-width: 770px) {
     .layout {
         flex-direction: column; /* Stack them vertically */
         align-items: center; /* Center them */
