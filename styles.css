@@ -41,7 +41,7 @@
 .table {
     border: 2px solid #333;
     border-radius: 2px;
-    padding: 10px;
+    padding: 1px;
     background-color: white;
     overflow-x: auto;
     overflow-y: auto;
