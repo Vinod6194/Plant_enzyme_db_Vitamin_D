@@ -72,13 +72,16 @@
         const screenWidth = window.innerWidth;
         const sunImage = document.getElementById('sun');
         const foodCropImage = document.getElementById('food_crop');
+        const flowChartIframe = document.getElementById('flow_chart_iframe');
 
         if (screenWidth <= 850) {
             sunImage.style.display = 'none';
             foodCropImage.style.display = 'none';
+            flowChartIframe.src = 'Sterol_bio_synthesis_flow_chart_vertical.html';
         } else {
             sunImage.style.display = 'block';
             foodCropImage.style.display = 'block';
+            flowChartIframe.src = 'Sterol_bio_synthesis_flow_chart.html';
         }
     }
 
